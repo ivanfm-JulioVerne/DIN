@@ -1,0 +1,21 @@
+div.verde{
+    background-color:greenyellow;
+    
+    height:25px;
+}
+div.gris{
+    background-color:grey;
+    height: 50px;
+}
+div.azul{
+    background-color:skyblue;
+    height: 50px;
+}
+div.cian{
+    background-color:cyan;
+    height: 50px;
+}
+div.naranja{
+    background-color:orange;
+    height: 50px;
+}
