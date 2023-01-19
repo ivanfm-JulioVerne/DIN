@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import React,{ Component} from "react";
 import Reloj from './components/Reloj';
+import { ReactDOM } from 'react-dom';
+import Toggle from './components/Toggle';
+
 class App extends Component{
   render(){
     return (
@@ -9,12 +12,14 @@ class App extends Component{
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         < Reloj />
+        <Toggle/>
       </header>
     </div>
   );}
 }
 
-/*function RelojComponents(props){
+/*
+function RelojComponents(props){
   const element=(
     <div>
       <h1>Hola mundo!</h1>
@@ -25,7 +30,7 @@ class App extends Component{
 }
 function tictac() {
   ReactDOM.render(< RelojComponents  date={new Date()}/>,document.getElementById("root"));
-}*/
-//setInterval(tictac,1000)
+}
+//setInterval(tictac,1000)*/
 
 export default App;
