@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import TeclaNum from './components/TeclaNum';
+import Display from './components/Display'
 import React from 'react';
 
 export default class App extends React.Component{
@@ -8,6 +9,7 @@ export default class App extends React.Component{
   return (
     <div className="App">
       <div className="Calculardora">
+      <Display datosDisplay="1"></Display>
       <TeclaNum num="7" />
       <TeclaNum num="8" />
       <TeclaNum num="9" />
