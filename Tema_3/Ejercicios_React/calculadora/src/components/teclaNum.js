@@ -1,8 +1,12 @@
 import React,{Component} from "react";
 
 
-export default class teclaNum extends Component{
+export default class TeclaNum extends Component{
     render(){
-        return (<div>Hello</div>);
+        return (
+            <button>
+                {this.props.num}
+            </button>
+        );
     }
 }
