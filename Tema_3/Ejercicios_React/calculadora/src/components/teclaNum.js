@@ -9,7 +9,4 @@ export default class TeclaNum extends Component{
             </button>
         );
     }
-    handlerClick=(event)=>{
-        console.log(this.props.num)
-    }
 }
