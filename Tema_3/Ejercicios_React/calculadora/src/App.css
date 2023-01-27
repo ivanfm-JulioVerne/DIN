@@ -1,5 +1,59 @@
+html{
+  background-color: #282c34;
+}
+
+.separador{
+  height: 0.5em;
+}
+
+.display{
+  background-color: white;
+  width: 25em;
+  height: 4em;
+  line-height: 4em;
+  text-align: center;
+  margin: auto;
+  border-radius: 2em;
+}
+.pDisplay{
+  font-size: 3em;
+}
+
+.teclaNum{
+  background-color: aliceblue;
+  margin: 2px;
+  width: 2em;
+  height: 2em;
+  border-radius: 0.75em;
+  font-size: 3em;
+}
+
+.teclaOp{
+  background-color: blue;
+  color: white;
+  margin: 2px;
+  width: 2em;
+  height: 2em;
+  border-radius: 0.75em;
+  font-size: 3em;
+}
+
+.teclaEsp{
+  background-color: green;
+  margin: 2px;
+  color: white;
+  width: 2em;
+  height: 2em;
+  border-radius: 0.75em;
+  font-size: 3em;
+}
+
 .App {
   text-align: center;
+  background-color:black;
+  width: 26em;
+  margin: auto;
+  border-radius: 2em;
 }
 
 .App-logo {

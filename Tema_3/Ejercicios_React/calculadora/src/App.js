@@ -75,7 +75,9 @@ export default class App extends React.Component{
   return (
     <div className="App">
       <div className="Calculardora">
+      <div class="separador"></div>
       <Display datosDisplay={this.state.datoDisplay}></Display>
+      <div class="separador"></div>
       <TeclaNum num="7" actualizaDisplay={this.actualizaDisplay}/>
       <TeclaNum num="8" actualizaDisplay={this.actualizaDisplay}/>
       <TeclaNum num="9" actualizaDisplay={this.actualizaDisplay}/>
@@ -94,6 +96,7 @@ export default class App extends React.Component{
       <TeclaNum num="0" actualizaDisplay={this.actualizaDisplay}/>
       <TeclaOperacion operacion="/" eligeOperacion={this.eligeOperacion}/>
       <TeclaEspecial inf="=" handlerTeclaEspecial={this.handlerTeclaEspecial}/>
+      <div class="separador"></div>
       </div>
     </div>
   );}
