@@ -74,33 +74,28 @@ export default class App extends React.Component{
   return (
     <div className="App">
       <div className="Calculardora">
-        <div class="row">
-          <Display datosDisplay={this.state.datoDisplay}></Display>
-        </div>
-      <div class="row">
-        <TeclaNum num="7" actualizaDisplay={this.actualizaDisplay}/>
-        <TeclaNum num="8" actualizaDisplay={this.actualizaDisplay}/>
-        <TeclaNum num="9" actualizaDisplay={this.actualizaDisplay}/>
-        <TeclaOperacion operacion="/" eligeOperacion={this.eligeOperacion}/>
-      </div>
-      <div class="row">
-        <TeclaNum num="4" actualizaDisplay={this.actualizaDisplay}/>
-        <TeclaNum num="5" actualizaDisplay={this.actualizaDisplay}/>
-        <TeclaNum num="6" actualizaDisplay={this.actualizaDisplay}/>
-        <TeclaOperacion operacion="x" eligeOperacion={this.eligeOperacion}/>
-      </div>
-      <div class="row">
-        <TeclaNum num="1" actualizaDisplay={this.actualizaDisplay}/>
-        <TeclaNum num="2" actualizaDisplay={this.actualizaDisplay}/>
-        <TeclaNum num="3" actualizaDisplay={this.actualizaDisplay}/>
-        <TeclaOperacion operacion="-" eligeOperacion={this.eligeOperacion}/>
-      </div>
-      <div class="row">
-        <TeclaEspecial inf="." />
-        <TeclaNum num="0" actualizaDisplay={this.actualizaDisplay}/>
-        <TeclaEspecial inf="=" handlerTeclaEspecial={this.handlerTeclaEspecial}/>
-        <TeclaOperacion operacion="+" eligeOperacion={this.eligeOperacion}/>
-      </div>
+      <div class="separador"></div>
+      <Display datosDisplay={this.state.datoDisplay}></Display>
+      <div class="separador"></div>
+      <TeclaNum num="7" actualizaDisplay={this.actualizaDisplay}/>
+      <TeclaNum num="8" actualizaDisplay={this.actualizaDisplay}/>
+      <TeclaNum num="9" actualizaDisplay={this.actualizaDisplay}/>
+      <TeclaOperacion operacion="+" eligeOperacion={this.eligeOperacion}/>
+      <br/>
+      <TeclaNum num="4" actualizaDisplay={this.actualizaDisplay}/>
+      <TeclaNum num="5" actualizaDisplay={this.actualizaDisplay}/>
+      <TeclaNum num="6" actualizaDisplay={this.actualizaDisplay}/>
+      <TeclaOperacion operacion="-" eligeOperacion={this.eligeOperacion}/>
+      <br/>
+      <TeclaNum num="1" actualizaDisplay={this.actualizaDisplay}/>
+      <TeclaNum num="2" actualizaDisplay={this.actualizaDisplay}/>
+      <TeclaNum num="3" actualizaDisplay={this.actualizaDisplay}/>
+      <TeclaOperacion operacion="x" eligeOperacion={this.eligeOperacion}/>
+      <br/>
+      <TeclaNum num="0" actualizaDisplay={this.actualizaDisplay}/>
+      <TeclaOperacion operacion="/" eligeOperacion={this.eligeOperacion}/>
+      <TeclaEspecial inf="=" handlerTeclaEspecial={this.handlerTeclaEspecial}/>
+      <div class="separador"></div>
       </div>
     </div>
   );}
