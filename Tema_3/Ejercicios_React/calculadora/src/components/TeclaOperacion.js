@@ -4,9 +4,9 @@ import React,{Component} from "react";
 export default class TeclaOperacion extends Component{
     render(){
         return (
-            <button onClick={this.props.eligeOperacion}>
+            <div class="col-3 border" onClick={this.props.eligeOperacion}>
                 {this.props.operacion}
-            </button>
+            </div>
         );
     }
 }

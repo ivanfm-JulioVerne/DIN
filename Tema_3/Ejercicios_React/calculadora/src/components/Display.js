@@ -1,10 +1,10 @@
 import React,{Component} from "react";
 
 
-export default class TeclaNum extends Component{
+export default class Display extends Component{
     render(){
         return (
-        <div>
+        <div class="col-12 border">
             <p>{this.props.datosDisplay}</p>
         </div>    
         );

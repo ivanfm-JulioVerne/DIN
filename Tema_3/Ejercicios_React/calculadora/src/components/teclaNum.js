@@ -4,9 +4,9 @@ import React,{Component} from "react";
 export default class TeclaNum extends Component{
     render(){
         return (
-            <button onClick={this.props.actualizaDisplay}>
+            <div class="col-3 border" onClick={this.props.actualizaDisplay}>
                 {this.props.num}
-            </button>
+            </div>
         );
     }
 }
