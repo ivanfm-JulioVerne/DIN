@@ -1,14 +1,18 @@
 import './App.css';
 import Selector from './components/Selector';
 import React,{ Component } from 'react';
+import MuestraFactura from './components/MuestraFactura';
 
 export default class App extends Component{
   constructor(){
     super()
     this.state={
-      elegido:0,
+      elegido:"",
       cantidad:0,
-      precio:0
+      precio:0,
+      datosFactura:"",
+      primero:true,
+      total:0
     }
   }
 
@@ -31,24 +35,44 @@ export default class App extends Component{
   }
 
   anadir=(e)=>{
-    const li=document.createElement("li")
-    var node=null
-    switch (this.state.elegido){
-      case 1:
-        node=document.createTextNode("Pizza - " + this.state.cantidad + " - " + this.state.precio)
-        break;
-      case 2:
-        node=document.createTextNode("Hamburguesa - " + this.state.cantidad + " - " + this.state.precio)
-        break;
-      case 3:
-        node=document.createTextNode("Arroz a la cubana - " + this.state.cantidad + " - " + this.state.precio)
-        break;
-      case 4:
-        node=document.createTextNode("Nachos - " + this.state.cantidad + " - " + this.state.precio)
-        break;
+    var tabla=document.getElementById("Tabla")
+    if (this.state.primero){
+      var trTitulo=document.createElement("tr")
+      var thTituloNombre=document.createElement("th")
+      var thTituloPrecio=document.createElement("th")
+      var thTituloCantidad=document.createElement("th")
+      var nodeTituloNombre=document.createTextNode("Nombre")
+      var nodeTituloPrecio=document.createTextNode("Precio")
+      var nodeTituloCantidad=document.createTextNode("Cantidad")
+      thTituloNombre.appendChild(nodeTituloNombre)
+      thTituloPrecio.appendChild(nodeTituloPrecio)
+      thTituloCantidad.appendChild(nodeTituloCantidad)
+      trTitulo.appendChild(thTituloNombre)
+      trTitulo.appendChild(thTituloCantidad)
+      trTitulo.appendChild(thTituloPrecio)
+      tabla.appendChild(trTitulo)
+
+      this.setState({
+        primero:false
+      })
     }
-    li.appendChild(node)
-    document.getElementById("lista").appendChild(li)
+    var tr=document.createElement("tr")
+    var tdNombre=document.createElement("td")
+    var tdPrecio=document.createElement("td")
+    var tdCantidad=document.createElement("td")
+    var nodeNombre=document.createTextNode(this.state.elegido)
+    var nodePrecio=document.createTextNode(this.state.precio)
+    var nodeCantidad=document.createTextNode(this.state.cantidad)
+    tdNombre.appendChild(nodeNombre)
+    tdPrecio.appendChild(nodePrecio)
+    tdCantidad.appendChild(nodeCantidad)
+    tr.appendChild(tdNombre)
+    tr.appendChild(tdCantidad)
+    tr.appendChild(tdPrecio)
+    tabla.appendChild(tr)
+    this.setState({
+      total:this.state.total+parseFloat(this.state.precio)*parseInt(this.state.cantidad)
+    })
   }
 
   render(){
@@ -60,8 +84,9 @@ export default class App extends Component{
             haCambCantidad={this.haCambCantidad} 
             haCambPrecio={this.haCambPrecio} 
             anadir={this.anadir}/>
-          <ul id='lista'>
-          </ul>
+          <table id="Tabla">
+          </table>
+          <p>Precio total: {this.state.total}€</p>
         </header>
       </div>
     );
